@@ -1,0 +1,71 @@
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+header {
+    border:3px; solid:green ;
+}
+
+a {
+   text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+section {
+    border: 3px solid gray ;
+}
+
+#header-title {
+    font-size: 64px;
+    color : purple
+    text-align: center;
+}    
+
+.link {
+    color: yellow ;
+    font-size: 24px;
+    text-decoration: none;
+}
+.link > a {
+    text-decoration: underline;
+    color: blue;
+}
+.article-title {
+    color: rgb(255, 149, 0);
+    font-size: 32px;
+    font-weight: bold;
+    }
+[type="text"] {
+    border: 1px dotted black;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+} 
+
+[href*="example"] {
+    color: red;
+    font-weight: bold;
+}
+
+[name="useremail"] {
+    background-color: mediumseagreen;
+}
+
+#container {
+    background-color:beige;
+}
+
+#container .container-btn {
+    font-size:20px;
+}
+
+#container .container-btn :hover{
+    font-size:40px;
+    color: red;
+}
+#container .container-item:first-child{
+    font-size: 20px;
+    color: blue;
+}

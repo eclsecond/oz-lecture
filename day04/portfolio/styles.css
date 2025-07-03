@@ -1,0 +1,93 @@
+header {
+    padding : 20px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.projects {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+aside {
+    padding: 10px;
+    border-left: 3px solid #007bff;
+    margin: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer p{
+    display: none;
+}
+
+header {/*sticky 헤더 적용*/
+
+    position: sticky;
+    top: 0;
+}
+
+aside {
+    position: relative;
+    top: 0;
+}
+
+aside h3 {
+    positon: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#projects {/*플렉스 레이아웃 적용*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#projects{ /*그리드 레이아웃 적용*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+h1 {
+    font-size: 2.5em ;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px;
+    color: #d33232;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 10px;
+    color: #3d32d3;
+}

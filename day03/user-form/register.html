@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form id="registration-form" action="#submit" method="POST"> <!-- action 속성은 실제 서버로 데이터를 전송할 때 사용됩니다. -->
+        <div>
+        <p class="form-group"> <!-- class 속성은 CSS 스타일링을 위해 사용됩니다. -->
+            <label for="username">사용자 이름:</label><!-- for 속성은 label과 input을 연결합니다. -->
+            <input type="text" id="username" name="username" placeholder="사용자 이름" required>
+        </p>
+            
+            <br><br>
+        <p class="form-group"> 
+            <label for="email">이메일:</label><!-- type="email"은 이메일 형식의 입력을 요구합니다. --><!-- required 속성은 필수 입력 필드를 나타냅니다. -->
+            <input type="email" id="email" name="email" placeholder="이메일" required>
+        </p> 
+            <br><br>
+        <p class="form-group">    
+            <label for="password">비밀번호:</label><!-- type="password"는 입력된 내용을 숨깁니다. -->
+            <input type="password" id="password" name="password" placeholder="비밀번호" required>
+        </p> 
+            <br><br>
+        <p class="form-group">     
+            <label for="date">생년월일:</label><!-- type="date"는 날짜 선택을 위한 입력 필드입니다. -->
+            <input type="date" id="date" name="date" placeholder="생년월일" required>
+        </p>
+            <br><br>
+        <p class="form-group">
+            <label for="number">나이:</label><!-- type="number"는 숫자 입력을 위한 필드입니다. -->
+            <input type="number" id="number" name="number" min="18" max="100" placeholder="나이" required>
+        </p>
+            <br><br>
+        <p class="form-group">
+            <label for="range">만족도 입력:</label><!-- type="range"는 슬라이더 형태로 값을 선택할 수 있는 입력 필드입니다. -->
+            <input type="range" id="range" name="range" min="1" max="10" placeholder="만족도 입력" required>
+        </p>
+            <br><br>
+        <p class="form-group">
+            <label for="gender">성별:</label><!-- type="radio"는 선택 항목 중 하나를 선택할 수 있는 입력 필드입니다. -->
+            <input type="radio" id="gender" name="gender" value="male" required> 남성
+            <input type="radio" id="gender" name="gender" value="female" required> 여성
+        </p>
+            <br><br>
+        <p class="form-group">  
+            <label for="interest">관심사 선택 : </label><!-- type="checkbox"는 여러 선택 항목 중 복수 선택이 가능한 입력 필드입니다. -->
+            <input type="checkbox" id="interest" name="interest" value="coding"> 코딩
+            <input type="checkbox" id="interest" name="interest" value="gaming"> 게임
+            <input type="checkbox" id="interest" name="interest" value="reading"> 독서
+        </p>
+            <br><br>
+        <p>
+            <label for="country">국가:</label><!-- type="select"는 드롭다운 목록을 제공하는 입력 필드입니다. -->
+            <select id="country" name="country" required>
+                <option value="southkorea">대한민국</option>
+                <option value="usa">미국</option>
+                <option value="japan">일본</option>
+                <option value="china">중국</option>
+                <option value="UK">영국</option>
+            </select>
+        </p>
+            <br><br>
+            <button type="submit">제출</button><!-- type="submit"은 폼을 제출하는 버튼입니다. -->
+            <button type="reset">초기화</button><!-- type="reset"은 폼의 입력 필드를 초기화하는 버튼입니다. -->     
+        </div>        
+        
+        <br><br>
+        
+        
+    </form>
+    
+</body>

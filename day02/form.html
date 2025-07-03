@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 입력 관련 태그</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="이메일을 입력하세요"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+        <input type="hidden" name="form_type" value="contact">
+        <br><br>
+        <div>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">뉴스레터 구독</label><br><br>
+        <div>
+        <input type="radio" id="option1" name="options" value="option1" checked>
+        <label for="option1">옵션 1</label><br>
+        <input type="radio" id="option2" name="options" value="option2">
+        <label for="option2">옵션 2</label><br>
+        <input type="radio" id="option3" name="options" value="option3">
+        <label for="option3">옵션 3</label><br><br>
+        <label for="country">국가:</label>
+        <select id="country" name="country">
+            <option value="kr">대한민국</option>
+            <option value="us">미국</option>
+            <option value="jp">일본</option>
+            <option value="cn">중국</option>
+        </select><br><br>
+        <label for="file">파일 업로드:</label>
+        <input type="file" id="file" name="file" accept=".jpg, .png, .pdf"><br><br>
+        <label for="date">날짜 선택:</label>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="time">시간 선택:</label>
+        <input type="time" id="time" name="time"><br><br>
+        <label for="color">색상 선택:</label>
+        <input type="color" id="color" name="color"><br><br>
+        <label for="range">범위 선택:</label>
+        <input type="range" id="range" name="range" min="0" max="100" value="50"><br><br>
+        <label for="number">숫자 입력:</label>
+        <input type="number" id="number" name="number" min="1" max="10" value="5"><br><br>
+        </div>
+        <div>
+            <select id="multiple-select" name="multiple-select" multiple>
+                <option value="option1">옵션 1</option>
+                <option value="option2">옵션 2</option>
+                <option value="option3">옵션 3</option>
+                <option value="option4">옵션 4</option>
+            </select><br><br>
+    
+        </div>
+</body>
+</html>

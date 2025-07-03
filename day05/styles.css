@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+}
+
+header {
+    background-color: lightblue;
+    padding: 1rem;
+    text-align: center;
+}
+main {
+    padding: 1rem;
+}
+.card {
+    width: 100%;
+    background-color: lightcoral;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+
+    .card {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: calc(33.33% - 0.67rem);
+    }
+}

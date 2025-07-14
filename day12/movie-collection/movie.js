@@ -1,43 +1,100 @@
-const movies = [
+// 영화 기본 장르 상수 선언 (const 사용 예시)
+const defaultGenre = "Unknown";
+
+// 영화 객체 배열 선언 (let 사용 예시)
+let movies = [
   {
-  title: "케이팝 데몬 헌터스",
-  director: "매기 강",
-  year: 2025,
-  genre: "animation",
+    title: "미션 임파서블:파이널 레코닝",
+    director: "크리스토퍼 맥쿼리",
+    year: 2025,
+    genre: "Action",
   },
   {
-    title: "타이타닉",
-    director: "크리스토퍼 놀란",
-    year: 2014,
-    genre: "SF",
+    title: "파묘",
+    director: "장재현",
+    year: 2024,
+    genre: "Mistery",
   },
   {
-    title: "범죄도시",
-    director: "강윤성",
-    year: 2017,
-    genre: "갱스터",
+    title: "서울의 봄",
+    director: "김성수",
+    year: 2023,
+    genre: "Drama",
   },
-  {
-    title: "클래식",
-    director: "곽재용",
-    year: 2003,
-    genre: "드라마",
-  },
-  {
-    title: "맘마미아",
-    director: "올 파커",
-    year: 2008,
-    genre: "뮤지컬",
-  }
 ];
 
+// 영화 객체 3개 하드코딩 (var 사용 예시)
+const movie1 = {
+  title: "The Matrix",
+  director: "Wachowskis",
+  year: 1999,
+  genre: "Sci-Fi",
+};
+const movie2 = {
+  title: "Inception",
+  director: "Nolan",
+  year: 2010,
+  genre: "Sci-Fi",
+};
+const movie3 = {
+  title: "Parasite",
+  director: "Bong",
+  year: 2019,
+  genre: "Drama",
+};
+movies.push(movie1);
+movies.push(movie2);
+movies.push(movie3);
 
-function printMovies(data){
-  for(i=0 ; i<data.length ;i++) {
-    console.log(i, data[i]);
+// 최소 3개의 영화 객체를 하드코딩으로 배열에 추가
+movies.push({
+  title: "The Matrix",
+  director: "Wachowskis",
+  year: 1999,
+  genre: "Sci-Fi",
+});
+movies.push({
+  title: "Inception",
+  director: "Christopher Nolan",
+  year: 2010,
+  genre: "Sci-Fi",
+});
+movies.push({
+  title: "Parasite",
+  director: "Bong Joon-ho",
+  year: 2019,
+  genre: "Drama",
+});
+// 빈 속성이 있는 영화 예시 (기본값 적용 확인용)
+movies.push({
+  title: "Eternal Sunshine of the Spotless Mind",
+  director: "",
+  year: 2004,
+  genre: "",
+});
+
+console.log(movies);
+
+const printMovie = (index, director = "Unknown", movie) => {
+  console.log(
+    `${index}. Title: ${movie.title}, Director: ${director}, Year: ${movie.year}, Genre: ${movie.genre}`
+  );
+  // 1. Title: [title], Director: [director], Year: [year], Genre: [genre]
+};
+
+const printMovies = (movies) => {
+  for (let i = 0; i < movies.length; i++) {
+    const movie = movies[i];
+    if (!movie.title) movie.title = "Unknown";
+    printMovie(i, movie.director, movie);
   }
+};
 
-}
-console.log("Movie Collection:\n");
+const printTotalMovies = (movies) => {
+  // Total Movies: [총 영화 수]
+  console.log(`Total Movies: ${movies.length}`);
+};
+
+console.log("Movie Collection:");
 printMovies(movies);
-console.log(`Total Moves: ${movies.length}`);
+printTotalMovies(movies);

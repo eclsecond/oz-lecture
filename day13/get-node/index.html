@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day13 get-node</title>
+</head>
+<input>
+    <h1 id="title">title</h1>
+    <p class="text">text-1</p>
+    <p class="text">text-2</p>
+    
+    <input type="email" name="email"></input>
+    
+    
+</body>
+<script>
+    // id 속성값이 "title"인 요소를 선택
+    const el = document.getElementById("title");
+    console.log(el); // <h1 id="title">title</h1>
+    console.log(typeof el); // object
+
+    // class 속성값이 "text"인 요소들을 선택
+    const els = document.getElementsByClassName("text");
+    console.log(els); // HTMLCollection(2) [p.text, p.text]
+    console.log(typeof els); // object
+
+    console.log(els[0]); // <p class="text">text-1</p>
+    console.log(els[1]); // <p class="text">text-2</
+
+    const tagEls = document.getElementsByTagName("p");
+    console.log(tagEls); // HTMLCollection(2) [p.text, p.text]
+
+     // name 속성값이 email인 요소 노드 모두 선택
+    const nameEls = document.getElementsByName("email");
+    console.log(nameEls);
+
+</script>
+</html>
